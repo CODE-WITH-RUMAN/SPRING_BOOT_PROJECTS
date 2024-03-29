@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website using flex box and z-index</title>
+    <style>
+        body{
+            background-color: black;
+            margin: 0px;
+            padding: 0px;
+            color:white ;
+        }
+        nav::before{
+            background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        .navbar{
+            /* border-radius: 15px;
+            border: 2px solid white; */
+        }
+        .navbar ul{
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            justify-content: center;
+        }
+        li{
+            
+            padding: 5px;
+            text-align: center;
+            margin: 20px 50px;
+            /* border: 2px solid red; */
+            list-style: none;
+        }
+        li a{
+            font-size: 20px;
+            color: aliceblue;
+            text-decoration: none;
+        }
+        li a:hover{
+            color: rgb(236, 43, 43);
+            text-decoration: underline;
+        }
+        .form{
+            margin: 50px 0px;
+            width: 500px;
+            /* border: 2px solid green; */
+            display: flex;
+            flex-direction: column;
+            border-radius: 30px;
+            height: 500px;
+            justify-content: center;
+        }
+        .form input{
+            border-radius: 30px;
+            width: 300px;
+            margin: 5px auto;
+            text-align: center;
+        }
+        .background img{
+            position:relative;
+            height: 100%;
+            width: 100%;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <ul>
+       <li><a href="/home">HOME</a></li>
+       <li><a href="/about">ABOUT US</a></li>
+       <li><a href="/service">SERVICES</a></li>
+       <li><a href="/contact">CONTACT US</a></li>
+       <li><a href="/signin">SIGN UP</a></li>
+       <li><a href="/logout">LOGOUT</a></li>
+       
+    </ul>
+</nav>
+<div class="form">
+    <input type="text" placeholder="Enter your name">
+    <input type="email" name="" id="" placeholder="Enter your email">
+    <input type="email" placeholder="Enter your email">
+</div>
+<!-- <div class="background">
+    <img src="background_for_P1.jpg" alt="">
+</div> -->
+
+</body>
+</html>

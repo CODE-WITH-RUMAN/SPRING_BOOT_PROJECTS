@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+			th:fragment="layout(content)">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME TO MY WEB</title>
+    <style>
+        .navbar{
+            background-color: black;
+            border-radius:30px;
+
+        }
+        .navbar li{
+            float:left ;
+            /* SINCE THE LIST IS A BLOCK ELEMENT WE FLOAT IT TO COME IN A SINGLE LINE  */
+            list-style: none;/*to remove bullets from list*/
+            margin: 20px 40px;
+            padding-top: 4px;
+            
+        }
+        .navbar ul{
+            overflow: auto;
+            /* SINCE IN THE ABOVE CODE WE USED FLOAT THE LIST OVERFLOWS THE PARENT SO WE USE THIS */
+        }
+        .navbar li a{
+            color: white;
+            text-decoration: none;
+            padding: 5px 5px;
+
+        }
+        .navbar li a:hover{
+            color: rgb(250, 3, 3);
+        }
+         .navbar input{
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 3px 20px;
+            width: 150px;
+        } 
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="register">REGISTER</a></li>
+                <li><a href="profile">PROFILE</a></li>
+                <li><a href="login">LOGIN</a></li>
+                <li><a href="logout">LOGOUT</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    <div th:replace="${content}"></div>
+    
+</body>
+</html>
